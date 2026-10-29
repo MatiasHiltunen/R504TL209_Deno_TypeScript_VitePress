@@ -84,3 +84,7 @@ Ohjeen versiosidonnaiset lähteet on lukittu virallisen repositorion `v1.6.4`-ta
 - [Paikallinen rakentaminen, esikatselu ja base-polku](https://github.com/vuejs/vitepress/blob/v1.6.4/docs/en/guide/deploy.md)
 
 Tämän paketin VitePress-versio on **1.6.4**. Todelliset käynnistyskomennot ja Node-vaatimus löytyvät aina mukana olevasta [package.json-tiedostosta](package.json).
+
+## Notes
+
+Remove the teacher's module from the materials 29.10.
