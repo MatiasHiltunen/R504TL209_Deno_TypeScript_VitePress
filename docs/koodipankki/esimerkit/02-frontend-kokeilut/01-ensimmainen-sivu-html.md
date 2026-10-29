@@ -1,0 +1,42 @@
+---
+outline: false
+---
+
+# esimerkit/02-frontend-kokeilut/01-ensimmainen-sivu.html
+
+**Ryhmä:** Frontendin pienet kokeilut.
+
+Tiedoston sijainti puretussa projektissa on `esimerkit/02-frontend-kokeilut/01-ensimmainen-sivu.html`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/esimerkit/02-frontend-kokeilut/01-ensimmainen-sivu.html.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````html
+<!-- DOCTYPE valitsee nykyisen HTML:n käsittelytavan. -->
+<!doctype html>
+<!-- html ympäröi sivun; lang kertoo tekstin olevan suomea. -->
+<html lang="fi">
+  <!-- head sisältää selaimen tarvitsemat asetukset. -->
+  <head>
+    <!-- UTF-8 saa ä- ja ö-kirjaimet näkymään oikein. -->
+    <meta charset="utf-8">
+    <!-- viewport sovittaa sivun laitteen leveyteen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title näkyy selaimen välilehdessä. -->
+    <title>Ensimmäinen harjoitukseni</title>
+  </head>
+  <!-- body sisältää käyttäjälle näkyvän sivun. -->
+  <body>
+    <!-- main kertoo, mikä alue on sivun pääsisältö. -->
+    <main>
+      <!-- h1 on koko sivun pääotsikko. -->
+      <h1>Minun tehtävätauluni</h1>
+      <!-- p muodostaa yhden tekstikappaleen. -->
+      <p>Tässä harjoituksessa opin tekemään verkkosivun.</p>
+      <!-- h2 aloittaa pääotsikon alaisen sisältöalueen. -->
+      <h2>Tämän päivän tavoite</h2>
+      <!-- Tämä p on toinen tekstikappale. -->
+      <p>Osaan tallentaa HTML-tiedoston ja avata sen selaimessa.</p>
+    </main>
+  </body>
+</html>
+````

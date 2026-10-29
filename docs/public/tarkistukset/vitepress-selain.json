@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-20",
+  "status": "passed",
+  "browser": "Chrome for Testing 155.0.8059.84",
+  "functional_checks": [
+    {
+      "name": "desktop: home",
+      "pass": true,
+      "detail": {
+        "title": "Kurssimateriaali | R504TL209 · Backend ja frontend",
+        "lang": "fi-FI",
+        "h1": [
+          "Backend ja frontendRautalangasta toimivaksi verkkosovellukseksi"
+        ],
+        "width": 1280,
+        "scrollWidth": 1280,
+        "scripts": [
+          "/assets/app.aAuW48Mq.js"
+        ]
+      }
+    },
+    {
+      "name": "näppäimistö: ohituslinkki ja näkyvä fokus",
+      "pass": true,
+      "detail": {
+        "text": "Siirry sisältöön",
+        "class": "VPSkipLink visually-hidden",
+        "href": "#VPContent",
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(23, 74, 128)",
+        "rect": {
+          "x": 16,
+          "y": 14,
+          "width": 120.03125,
+          "height": 40
+        },
+        "focusVisible": true,
+        "targetAfterEnter": "VPContent"
+      }
+    },
+    {
+      "name": "paikallinen haku: autorisointi, Enter ja Escape",
+      "pass": true,
+      "detail": {
+        "query": "autorisointi",
+        "resultCount": 16,
+        "selectedHref": "/luvut/07-turvallinen-sovellus.html#ensin-kaksi-erillista-paatosta",
+        "enteredUrl": "http://127.0.0.1:4173/luvut/07-turvallinen-sovellus.html#ensin-kaksi-erillista-paatosta",
+        "closedWithEscape": true
+      }
+    },
+    {
+      "name": "mobiilin Sisällysluettelo navigoi ja sulkeutuu",
+      "pass": true,
+      "detail": {
+        "destination": "http://127.0.0.1:4173/luvut/10-harjoitukset.html",
+        "sidebarClosed": true
+      }
+    },
+    {
+      "name": "koodi tekstinä ja todellinen kopiointi: pitka-js",
+      "pass": true,
+      "detail": {
+        "source": "esimerkit/04-valmis/public/app.js",
+        "sourceBytes": 38533,
+        "sourceSha256": "4c79943be251ae448e56e8824f33ae707cac853cc97b7a95030a9c37fb01e646",
+        "renderedTextMatches": true,
+        "clipboardMatches": true,
+        "clipboardBytes": 38532,
+        "comparisonRule": "Vain yksi mahdollinen viimeinen CRLF- tai LF-rivinvaihto poistetaan vertailusta.",
+        "copyFocus": {
+          "opacity": "1",
+          "outlineStyle": "auto",
+          "outlineWidth": "4px",
+          "title": "Kopioi koodi"
+        }
+      }
+    },
+    {
+      "name": "Markdown-kooste latautuu raakatiedostona ja sisältö täsmää",
+      "pass": true,
+      "detail": {
+        "suggestedFilename": "R504TL209_Deno_TypeScript_oppimateriaali.md",
+        "bytes": 447021,
+        "sha256": "a6ce5e6b658de4ec211ca721fbe9b7c6991abb82572463b0b8aaa67eac7e4ca7",
+        "contentType": "text/markdown",
+        "browserDownloadEvent": true,
+        "byteExact": true
+      }
+    },
+    {
+      "name": "kahden valitun lähdekooditekstin lataussisällöt",
+      "pass": true,
+      "detail": {
+        "count": 2,
+        "byteExact": true
+      }
+    }
+  ],
+  "reflow_samples": [
+    {
+      "page": "/luvut/01-kasitteet.html",
+      "status": 200,
+      "data": {
+        "width": 320,
+        "scroll": 320,
+        "codeBlocks": 0,
+        "rawFormCount": 0,
+        "h1": [
+          "01 Verkkosovellus rautalangasta ​"
+        ],
+        "menuButtons": [
+          {
+            "text": "Sisällysluettelo",
+            "aria": null
+          }
+        ],
+        "rootFont": "16px"
+      }
+    },
+    {
+      "page": "/luvut/01-kasitteet.html",
+      "root2x": {
+        "width": 320,
+        "scroll": 320,
+        "rootFont": "32px"
+      }
+    },
+    {
+      "page": "/luvut/10-harjoitukset.html",
+      "status": 200,
+      "data": {
+        "width": 320,
+        "scroll": 320,
+        "codeBlocks": 0,
+        "rawFormCount": 0,
+        "h1": [
+          "10 Harjoitukset, suorituspolut ja arviointi ​"
+        ],
+        "menuButtons": [
+          {
+            "text": "Sisällysluettelo",
+            "aria": null
+          }
+        ],
+        "rootFont": "16px"
+      }
+    },
+    {
+      "page": "/luvut/10-harjoitukset.html",
+      "root2x": {
+        "width": 320,
+        "scroll": 320,
+        "rootFont": "32px"
+      }
+    },
+    {
+      "page": "/koodipankki/esimerkit/04-valmis/public/app-js.html",
+      "status": 200,
+      "data": {
+        "width": 320,
+        "scroll": 320,
+        "codeBlocks": 1,
+        "rawFormCount": 0,
+        "h1": [
+          "esimerkit/04-valmis/public/app.js ​"
+        ],
+        "menuButtons": [
+          {
+            "text": "Sisällysluettelo",
+            "aria": null
+          }
+        ],
+        "rootFont": "16px"
+      }
+    },
+    {
+      "page": "/koodipankki/esimerkit/04-valmis/public/app-js.html",
+      "root2x": {
+        "width": 320,
+        "scroll": 320,
+        "rootFont": "32px"
+      }
+    },
+    {
+      "page": "/koodipankki/esimerkit/02-frontend/index-html.html",
+      "status": 200,
+      "data": {
+        "width": 320,
+        "scroll": 320,
+        "codeBlocks": 1,
+        "rawFormCount": 0,
+        "h1": [
+          "esimerkit/02-frontend/index.html ​"
+        ],
+        "menuButtons": [
+          {
+            "text": "Sisällysluettelo",
+            "aria": null
+          }
+        ],
+        "rootFont": "16px"
+      }
+    },
+    {
+      "page": "/koodipankki/esimerkit/02-frontend/index-html.html",
+      "root2x": {
+        "width": 320,
+        "scroll": 320,
+        "rootFont": "32px"
+      }
+    }
+  ],
+  "final_accessibility_checks": {
+    "escape_returns_to_search_button": true,
+    "shortcut_returns_to_original_control": true,
+    "finnish_accessible_names": true,
+    "sidebar_group_space_key": true,
+    "search_result_navigation_after_fix": true,
+    "no_javascript_console_or_http_errors": true,
+    "favicon_data_uri": true
+  },
+  "errors_in_final_targeted_run": [],
+  "resolved_findings": [
+    "Suomenkieliset mobile navigation- ja toggle section -apuvälinenimet.",
+    "Haun kohdistuksen palautus avauskohtaan.",
+    "Faviconin 404 korjattu sisällytetyllä SVG-kuvakkeella."
+  ],
+  "scope": "Näytesivut ja nimetyt käyttäjäpolut; ei kaikkien sivujen selaintesti eikä täydellinen WCAG-auditointi."
+}

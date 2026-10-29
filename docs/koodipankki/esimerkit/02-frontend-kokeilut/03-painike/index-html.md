@@ -1,0 +1,42 @@
+---
+outline: false
+---
+
+# esimerkit/02-frontend-kokeilut/03-painike/index.html
+
+**Ryhmä:** Frontendin pienet kokeilut.
+
+Tiedoston sijainti puretussa projektissa on `esimerkit/02-frontend-kokeilut/03-painike/index.html`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/esimerkit/02-frontend-kokeilut/03-painike/index.html.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````html
+<!-- Valitaan nykyinen HTML. -->
+<!doctype html>
+<!-- Sivun kieli on suomi. -->
+<html lang="fi">
+  <!-- Asetusten alku. -->
+  <head>
+    <!-- Merkistö on UTF-8. -->
+    <meta charset="utf-8">
+    <!-- Näkymä sovitetaan laitteen leveyteen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Nimi selaimen välilehdelle. -->
+    <title>Painikekokeilu</title>
+    <!-- src löytää ohjelman; defer odottaa sivun rakenteen valmistumista. -->
+    <script src="app.js" defer></script>
+  </head>
+  <!-- Näkyvän sivun alku. -->
+  <body>
+    <!-- main sisältää pääsisällön. -->
+    <main>
+      <!-- h1 nimeää koko kokeilun. -->
+      <h1>Ensimmäinen toiminto</h1>
+      <!-- id yhdistää painikkeen ohjelmaan; type tekee tavallisen toimintopainikkeen. -->
+      <button id="tervehdys" type="button">Näytä tervehdys</button>
+      <!-- id löytyy ohjelmasta; role ilmoittaa muuttuvan tekstin ruudunlukijalle. -->
+      <p id="viesti" role="status">Odota painikkeen painamista.</p>
+    </main>
+  </body>
+</html>
+````

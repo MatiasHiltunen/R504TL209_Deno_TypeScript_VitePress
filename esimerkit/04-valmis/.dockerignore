@@ -1,0 +1,10 @@
+# Oikeaa sovellusdataa tai väliaikaisia testikopioita ei pakata imageen.
+data
+# Tietokantatiedostot jätetään pois myös silloin, jos ne on luotu vahingossa väärään kansioon.
+*.sqlite*
+# Paikallista asetus- ja salaisuustiedostoa ei saa kopioida imageen.
+.env
+# Versionhallinnan sisäistä historiaa ei tarvita ajettavaan konttiin.
+.git
+# Editorin paikalliset asetukset eivät kuulu ajettavaan sovellukseen.
+.vscode

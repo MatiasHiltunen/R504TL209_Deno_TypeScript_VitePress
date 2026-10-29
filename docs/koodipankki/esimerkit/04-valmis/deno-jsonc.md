@@ -1,0 +1,51 @@
+---
+outline: false
+---
+
+# esimerkit/04-valmis/deno.jsonc
+
+**Ryhmä:** Valmiin sovelluksen backend.
+
+Tiedoston sijainti puretussa projektissa on `esimerkit/04-valmis/deno.jsonc`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/esimerkit/04-valmis/deno.jsonc.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````jsonc
+// JSONC on JSON-muotoinen asetustiedosto, jossa //-kommentit ovat sallittuja.
+{
+  // tasks antaa komennoille lyhyet nimet: esimerkiksi deno task start.
+  "tasks": {
+    // start: run suorittaa ohjelman; --no-prompt estää odottamattomat lupakyselyt.
+    // --allow-read sallii vain datan, julkiset tiedostot ja oman migraation lukemisen.
+    // --allow-write sallii vain data-hakemistoon kirjoittamisen, myös SQLite-aputiedostot.
+    // --allow-net rajaa kuuntelun paikalliseen osoitteeseen tai Dockerin 0.0.0.0-osoitteeseen portissa 8000.
+    // --allow-env sallii vain kolme nimettyä asetusta. Porttia muutettaessa muuta myös verkkolupaa.
+    "start": "deno run --no-prompt --allow-read=./data,./public,./01_create_schema.sql --allow-write=./data --allow-net=127.0.0.1:8000,0.0.0.0:8000 --allow-env=APP_HOST,APP_PORT,APP_ORIGIN main.ts",
+    // dev käyttää samoja rajattuja lupia; --watch käynnistää ohjelman uudelleen lähdetiedoston muuttuessa.
+    "dev": "deno run --watch=./public --no-prompt --allow-read=./data,./public,./01_create_schema.sql --allow-write=./data --allow-net=127.0.0.1:8000,0.0.0.0:8000 --allow-env=APP_HOST,APP_PORT,APP_ORIGIN main.ts",
+    // check tarkistaa TypeScript-tyypit suorittamatta HTTP-palvelinta tai muokkaamatta tietokantaa.
+    "check": "deno check main.ts integration_test.ts seed/admin.ts",
+    // test käyttää omaa muistissa tai väliaikaisessa alihakemistossa olevaa kantaa, ei opiskelijan sovelluskantaa.
+    // Testit kutsuvat oikeaa Request -> Response -käsittelijää, joten ne eivät tarvitse verkkolupaa.
+    "test": "deno test --no-prompt --allow-read=./data,./public,./01_create_schema.sql --allow-write=./data integration_test.ts",
+    // admin ylentää jo rekisteröidyn käyttäjän; lisää sähköpostiosoite task-komennon loppuun.
+    "admin": "deno run --no-prompt --allow-read=./data,./01_create_schema.sql --allow-write=./data seed/admin.ts",
+    // fmt yhdenmukaistaa sisennykset ja rivinvaihdot, jotta koodia on helpompi lukea yhdessä.
+    "fmt": "deno fmt",
+    // lint etsii yleisiä koodivirheitä; se ei korvaa tietoturva- tai käyttöoikeustestejä.
+    "lint": "deno lint"
+  },
+  // compilerOptions muuttaa TypeScriptin ennen ajoa tekemiä tarkistuksia.
+  "compilerOptions": {
+    // strict vaatii täsmällistä tyypitystä ja esimerkiksi puuttuvien arvojen huomioimista.
+    "strict": true
+  },
+  // fmt-asetukset ohjaavat deno fmt -komennon tulostyyliä.
+  "fmt": {
+    // Kohtuullinen rivipituus auttaa näyttämään koodia luennolla ja rinnakkain editorissa.
+    "lineWidth": 100
+  },
+  // excludes rajaa generoidut tietokantatiedostot pois kehitystyökalujen tiedostojen läpikäynnistä.
+  "exclude": ["data"]
+}
+````

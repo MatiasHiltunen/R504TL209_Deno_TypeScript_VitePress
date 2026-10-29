@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "browser": "Chromium 155.0.8059.84",
+  "passed": 6,
+  "checks": [
+    "14 emojin salasana (28 UTF-16-yksikköä) hylätään näkyvällä 15–128-virheellä ennen verkkopyyntöä.",
+    "15 emojin salasana hyväksytään selaimessa ja backendissä, rekisteröinti onnistuu.",
+    "100 emojin projekti säilyy kokonaisena kentässä ja tallentuu backendin 120 koodipisteen rajan mukaisesti.",
+    "121 emojin projektin nimi hylätään näkyvällä 1–120-virheellä; ylimääräistä projektia eikä verkkopyyntöä synny.",
+    "Projektin muokkaus käyttää samaa laskentaa: 120 emojia hyväksytään.",
+    "Tehtävän luonti hyväksyy 200 emojia ja muokkaus hylkää 201 emojia 1–200-virheellä."
+  ],
+  "pageErrors": []
+}

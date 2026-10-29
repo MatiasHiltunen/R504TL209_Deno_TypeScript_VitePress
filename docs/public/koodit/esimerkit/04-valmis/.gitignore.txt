@@ -1,0 +1,11 @@
+# data sisältää paikalliset käyttäjät ja istunnot, joten sitä ei tallenneta Gitiin.
+data/
+# Älä lisää oikeita asetussalaisuuksia; .env.example on vain julkinen mallipohja.
+.env
+.env.*
+!.env.example
+# Myös muualle vahingossa luotu tietokanta ja sen apuosat jätetään pois.
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*

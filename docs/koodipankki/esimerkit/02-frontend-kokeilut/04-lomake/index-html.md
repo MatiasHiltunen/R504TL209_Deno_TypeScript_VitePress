@@ -1,0 +1,52 @@
+---
+outline: false
+---
+
+# esimerkit/02-frontend-kokeilut/04-lomake/index.html
+
+**Ryhmä:** Frontendin pienet kokeilut.
+
+Tiedoston sijainti puretussa projektissa on `esimerkit/02-frontend-kokeilut/04-lomake/index.html`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/esimerkit/02-frontend-kokeilut/04-lomake/index.html.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````html
+<!-- Nykyisen HTML:n asiakirja. -->
+<!doctype html>
+<!-- lang kertoo sivun kielen. -->
+<html lang="fi">
+  <!-- Selaimen asetukset alkavat. -->
+  <head>
+    <!-- Merkistö tukee suomen kirjaimia. -->
+    <meta charset="utf-8">
+    <!-- Sivun leveys sovitetaan laitteen näkymään. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Välilehden otsikko. -->
+    <title>Lomakekokeilu</title>
+    <!-- src löytää ohjelman; defer odottaa HTML:n valmistumista. -->
+    <script src="app.js" defer></script>
+  </head>
+  <!-- Sivulla näkyvä sisältö alkaa. -->
+  <body>
+    <!-- main nimeää sivun pääsisällön alueen. -->
+    <main>
+      <!-- h1 on sivun pääotsikko. -->
+      <h1>Nimeä seuraava tehtävä</h1>
+      <!-- form kokoaa lomakkeen; id antaa sille tunnisteen ohjelmaa varten. -->
+      <form id="lomake">
+        <!-- label näkyy koko ajan; for yhdistää nimen oikeaan kenttään. -->
+        <label for="tehtava">Tehtävän nimi (pakollinen)</label>
+        <!-- id yhdistää labelin; name nimeää tiedon; text on kenttätyyppi. -->
+        <!-- required tekee kentästä pakollisen; maxlength rajaa pituuden. -->
+        <input id="tehtava" name="title" type="text" required maxlength="200">
+        <!-- submit lähettää lomakkeen myös kentästä Enteriä painettaessa. -->
+        <button type="submit">Näytä tehtävä</button>
+      </form>
+      <!-- id löytyy koodista; role ilmoittaa tekstin muutokset rauhallisesti. -->
+      <p id="tulos" role="status">Et ole vielä antanut tehtävää.</p>
+      <!-- role="alert" ilmoittaa virheen heti; alue on jo valmiina DOMissa. -->
+      <p id="virhe" role="alert"></p>
+    </main>
+  </body>
+</html>
+````

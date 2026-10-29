@@ -1,0 +1,120 @@
+---
+outline: false
+---
+
+# esimerkit/02-frontend/styles.css
+
+**Ryhmä:** Frontend selaimen muistissa.
+
+Tiedoston sijainti puretussa projektissa on `esimerkit/02-frontend/styles.css`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/esimerkit/02-frontend/styles.css.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````css
+/* Tähti valitsee jokaisen HTML-elementin. */
+* {
+  /* Mitattava leveys sisältää myös täytteen ja reunuksen. */
+  box-sizing: border-box;
+}
+
+/* body-sääntö antaa koko sivun oletustyylit. */
+body {
+  /* Käytetään laitteen valmiita kirjasimia. */
+  font-family: system-ui, sans-serif;
+  /* Tekstin koko seuraa käyttäjän selaimeen valitsemaa peruskokoa. */
+  font-size: 1rem;
+  /* Ilmava riviväli helpottaa lukemista. */
+  line-height: 1.6;
+  /* Tumma teksti erottuu vaaleasta taustasta. */
+  color: #172b3a;
+  /* Tausta on vaalea. */
+  background: #f4f7fa;
+  /* Selaimen oletusmarginaali korvataan omalla täytteellä. */
+  margin: 0;
+  /* Sisältö ei osu näytön reunoihin. */
+  padding: 1rem;
+  /* Pitkät sanat saavat katketa kapeassa näkymässä. */
+  overflow-wrap: anywhere;
+}
+
+/* main on sivun pääsisällön alue. */
+main {
+  /* Luettavuutta helpottava enimmäisleveys ei pakota sivua pienellä näytöllä leveäksi. */
+  max-width: 46rem;
+  /* Automaattiset vasen ja oikea marginaali keskittävät sisällön. */
+  margin-inline: auto;
+}
+
+/* Jokainen label saa näkyvän oman rivin. */
+label {
+  /* block aloittaa oman rivin. */
+  display: block;
+  /* Nimi erottuu lihavoinnilla. */
+  font-weight: 650;
+  /* Nimen yläpuolelle jää tilaa. */
+  margin-top: 0.75rem;
+}
+
+/* Syötteillä ja painikkeilla on yhteisiä ulkoasuominaisuuksia. */
+input,
+button {
+  /* Peritään sivun luettava kirjasin ja tekstikoko. */
+  font: inherit;
+  /* Vähintään 44 pikselin korkeus helpottaa osoittamista. */
+  min-height: 44px;
+  /* Sisältö ei osu reunukseen. */
+  padding: 0.5rem 0.75rem;
+  /* Selkeä reunus erottaa kentät ja painikkeet taustasta. */
+  border: 2px solid #586577;
+  /* Alapuolen väli erottaa seuraavan toiminnon. */
+  margin-bottom: 0.5rem;
+}
+
+/* Tavallinen syötekenttä käyttää käytettävissä olevan leveyden. */
+input {
+  /* Leveys ei ylitä vanhempaa box-sizing-säännön ansiosta. */
+  width: 100%;
+  /* Syöttöteksti on tummaa. */
+  color: #172b3a;
+  /* Kentän pohja on valkoinen. */
+  background: #ffffff;
+}
+
+/* Painikkeen tumma tausta ja vaalea teksti erottuvat toisistaan. */
+button {
+  /* Painikkeen tausta on tumma sinivihreä. */
+  background: #174e5c;
+  /* Painikkeen teksti on valkoista. */
+  color: #ffffff;
+  /* Osoitin ilmaisee hiirellä käytettävän toiminnon. */
+  cursor: pointer;
+  /* Pitkä painiketeksti saa mennä usealle riville. */
+  white-space: normal;
+}
+
+/* Näppäimistökohdistus näkyy selvästi kaikissa kohteissa. */
+:focus-visible {
+  /* Sininen paksu ääriviiva kertoo, mikä kohde on aktiivinen. */
+  outline: 3px solid #005fcc;
+  /* Viiva siirtyy hieman irti elementin reunasta. */
+  outline-offset: 3px;
+}
+
+/* id-valitsin alkaa #-merkillä; tämä koskee vain virhealuetta. */
+#error {
+  /* Virhe näkyy tummanpunaisena mutta kerrotaan aina myös sanoin. */
+  color: #7e1720;
+  /* Lihavointi auttaa huomaamaan virhetekstin. */
+  font-weight: 650;
+}
+
+/* Listan tehtävät erotetaan toisistaan. */
+li {
+  /* Jokaisen tehtävän yläreunassa on viiva. */
+  border-top: 1px solid #718096;
+  /* Sisältö ja reunaviiva erotetaan sisätäytteellä. */
+  padding-block: 0.75rem;
+  /* Tehtävien alle jätetään väliä. */
+  margin-bottom: 0.75rem;
+}
+````

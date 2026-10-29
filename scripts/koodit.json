@@ -1,0 +1,113 @@
+[
+  {
+    "number": 1,
+    "title": "Ensimmäinen ohjelma ja TypeScript",
+    "files": [
+      "esimerkit/00-kieli/hei.ts",
+      "esimerkit/00-kieli/kieli.ts"
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Ensimmäinen Deno-palvelin",
+    "files": [
+      "esimerkit/01-palvelin/main.ts"
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Frontendin pienet kokeilut",
+    "files": [
+      "esimerkit/02-frontend-kokeilut/01-ensimmainen-sivu.html",
+      "esimerkit/02-frontend-kokeilut/02-tyylit/index.html",
+      "esimerkit/02-frontend-kokeilut/02-tyylit/styles.css",
+      "esimerkit/02-frontend-kokeilut/03-painike/app.js",
+      "esimerkit/02-frontend-kokeilut/03-painike/index.html",
+      "esimerkit/02-frontend-kokeilut/04-lomake/app.js",
+      "esimerkit/02-frontend-kokeilut/04-lomake/index.html",
+      "esimerkit/02-frontend-kokeilut/05-lista/app.js",
+      "esimerkit/02-frontend-kokeilut/05-lista/index.html"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Frontend selaimen muistissa",
+    "files": [
+      "esimerkit/02-frontend/index.html",
+      "esimerkit/02-frontend/styles.css",
+      "esimerkit/02-frontend/app.js"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "SQLite ensimmäistä kertaa",
+    "files": [
+      "esimerkit/03-tietokanta/db_demo.ts",
+      "esimerkit/03-tietokanta/.gitignore"
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Valmiin sovelluksen backend",
+    "files": [
+      "esimerkit/04-valmis/01_create_schema.sql",
+      "esimerkit/04-valmis/db.ts",
+      "esimerkit/04-valmis/security.ts",
+      "esimerkit/04-valmis/http.ts",
+      "esimerkit/04-valmis/auth.ts",
+      "esimerkit/04-valmis/projects.ts",
+      "esimerkit/04-valmis/app.ts",
+      "esimerkit/04-valmis/main.ts",
+      "esimerkit/04-valmis/deno.jsonc",
+      "esimerkit/04-valmis/.gitignore"
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Valmiin sovelluksen frontend",
+    "files": [
+      "esimerkit/04-valmis/public/index.html",
+      "esimerkit/04-valmis/public/styles.css",
+      "esimerkit/04-valmis/public/app.js"
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Turvatoimintojen kokeet, testit ja ylläpitäjä",
+    "files": [
+      "esimerkit/04-valmis/security_demo.ts",
+      "esimerkit/04-valmis/oikeuskoe_test.ts",
+      "esimerkit/04-valmis/csrfkoe_test.ts",
+      "esimerkit/04-valmis/integration_test.ts",
+      "esimerkit/04-valmis/seed/admin.ts"
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Dockerin pakollinen PostgreSQL-peruslabra",
+    "files": [
+      "docker-postgres/compose.yaml",
+      "docker-postgres/.env.example",
+      "docker-postgres/.gitignore",
+      "docker-postgres/sql/01-schema.sql",
+      "docker-postgres/sql/02-write.sql",
+      "docker-postgres/sql/03-read.sql"
+    ]
+  },
+  {
+    "number": 10,
+    "title": "L2-lähtöpohja: koko SQLite-sovellus konttiin",
+    "files": [
+      "esimerkit/04-valmis/Dockerfile",
+      "esimerkit/04-valmis/compose.sqlite.yaml",
+      "esimerkit/04-valmis/.dockerignore"
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Koko materiaalipaketin versionhallinnan rajaus",
+    "files": [
+      ".gitignore"
+    ]
+  }
+]

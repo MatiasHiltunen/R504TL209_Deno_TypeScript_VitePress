@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-19",
+  "browser": "Chromium 155.0.8059.84",
+  "results": [
+    {
+      "check": "Opas, työpöytänäkymä",
+      "result": "pass",
+      "viewport": 1280,
+      "scroll": 1280
+    },
+    {
+      "check": "Näppäimistön ohituslinkki siirtää kohdistuksen pääsisältöön",
+      "result": "pass"
+    },
+    {
+      "check": "Luvun oma sisällysluettelo avautuu näppäimistöllä",
+      "result": "pass"
+    },
+    {
+      "check": "Opas, 320 CSS-pikseliä",
+      "result": "pass",
+      "viewport": 320,
+      "scroll": 320
+    },
+    {
+      "check": "Koodipankki, 320 CSS-pikseliä",
+      "result": "pass",
+      "viewport": 320,
+      "scroll": 320
+    },
+    {
+      "check": "Opas, kaksinkertainen juuritekstikoko",
+      "result": "pass",
+      "viewport": 1280,
+      "scroll": 1280
+    },
+    {
+      "check": "Kaikki dokumentin sisäiset linkkikohteet löytyvät",
+      "result": "pass"
+    }
+  ],
+  "page_errors": [],
+  "limits": [
+    "Ei ruudunlukijan kuuntelutestiä tai täydellistä WCAG-auditointia.",
+    "Suurennuskoe käyttää kaksinkertaista juuritekstikokoa; 320 CSS-pikselin näkymä on tarkistettu erikseen."
+  ]
+}

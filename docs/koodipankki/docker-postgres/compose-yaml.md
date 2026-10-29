@@ -1,0 +1,60 @@
+---
+outline: false
+---
+
+# docker-postgres/compose.yaml
+
+**Ryhmä:** Dockerin pakollinen PostgreSQL-peruslabra.
+
+Tiedoston sijainti puretussa projektissa on `docker-postgres/compose.yaml`. Kopioi koko sisältö kommentteineen tähän tiedostoon. Suorituskomennot ja odotettu tulos ovat asianomaisessa tutoriaaliluvussa.
+
+[Lataa lähdekoodi tekstinä](/koodit/docker-postgres/compose.yaml.txt) · [Palaa koodipankkiin](/koodipankki/)
+
+````yaml
+# Sama projektinimi tekee harjoituksen kontit ja volumen helposti tunnistettaviksi.
+name: tehtavataulu-pg-labra
+
+# Services-osassa luetellaan tällä Compose-tiedostolla käynnistettävät palvelut.
+services:
+  # db on tietokantapalvelun nimi; toinen saman verkon kontti käyttää sitä osoitteena.
+  db:
+    # Käytämme PostgreSQL:n pääversiota 17, jonka datakansio on alla kuvattu polku.
+    image: postgres:17
+    # Environment välittää asetukset käynnistyvälle kontille.
+    environment:
+      # Tämä tietokanta luodaan, kun datavolume on ensimmäisellä käynnistyksellä tyhjä.
+      POSTGRES_DB: kurssilabra
+      # Tämä on labran alustava ylläpitotunnus, ei verkkosovelluksen käyttötunnus.
+      POSTGRES_USER: lab_owner
+      # Compose lukee arvon .env-tiedostosta; tyhjä tai puuttuva arvo estää käynnistyksen.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Aseta POSTGRES_PASSWORD tiedostoon .env}
+    # Ports avaa yhteyden oman koneen osoitteesta kontin tietokantaporttiin.
+    ports:
+      # Vain oma kone: isännän osoite, isännän portti ja kontin portti tässä järjestyksessä.
+      - "127.0.0.1:5432:5432"
+    # Volumes liittää pysyvän tallennustilan ja tarvittavat harjoitustiedostot konttiin.
+    volumes:
+      # Nimetty volume säilyttää PostgreSQL 17:n datan myös kontin poistamisen jälkeen.
+      - pgdata:/var/lib/postgresql/data
+      # PostgreSQL suorittaa alustustiedoston vain, kun sen datakansio on tyhjä; ro on vain luku.
+      - ./sql/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      # Näitä SQL-tiedostoja suoritetaan itse labran aikana; niitä saa vain lukea kontista.
+      - ./sql:/lab-sql:ro
+    # Healthcheck on automaattisesti toistuva tarkistus palvelun valmiudesta.
+    healthcheck:
+      # TCP-osoite odottaa varsinaista palvelinta, ei alustuksen väliaikaista paikallista yhteyttä.
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "lab_owner", "-d", "kurssilabra"]
+      # Tarkistus aloitetaan viiden sekunnin välein.
+      interval: 5s
+      # Yksi tarkistus saa kestää enintään viisi sekuntia.
+      timeout: 5s
+      # Kymmenen peräkkäistä epäonnistumista johtaa epäterveeseen tilaan.
+      retries: 10
+      # Alustukselle annetaan aluksi kymmenen sekunnin käynnistymisaika.
+      start_period: 10s
+
+# Tässä määritellään projektin hallinnoimat nimetyt volumet.
+volumes:
+  # Compose luo volumen, jonka nimessä on projektin nimi ja tämä pgdata-osa.
+  pgdata:
+````

@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-20T05:29:43.760057+00:00",
+  "status": "passed",
+  "scope": "Riippumaton sisältö- ja lähdekoodin muuttumattomuusvertailu VitePress-muunnokselle. Ei backend-, selain- tai Docker-ajotestejä.",
+  "summary": {
+    "source_files_compared": 46,
+    "source_files_identical": 46,
+    "chapters_compared": 12,
+    "chapters_byte_identical": 6,
+    "chapters_pedagogically_unchanged": 12,
+    "manifest_files": 45,
+    "code_pages_identical": 45,
+    "downloads_identical": 45,
+    "combined_code_files_identical": 45,
+    "unexpected_content_changes": []
+  },
+  "requirements": {
+    "P1_P9": {
+      "all_nine_headings_present": true,
+      "all_mandatory_declaration_present": true
+    },
+    "L1_L5": {
+      "all_five_present": true,
+      "optional_and_no_replacement_preserved": true
+    },
+    "M1": {
+      "occurrences_original": 12,
+      "occurrences_new": 12,
+      "required_migration_preserves_existing_data": true
+    },
+    "alternative_technology": {
+      "same_grade_ceiling": true,
+      "all_requirements_unchanged": true
+    },
+    "security_authentication_authorization": {
+      "chapter_07_byte_identical": true,
+      "chapter_09_byte_identical": true,
+      "P7_P8_P9_requirements_identical": true
+    }
+  },
+  "intentional_exceptions": [
+    {
+      "path": ".gitignore",
+      "reason": "Projektin juuren versionhallinnan rajaukseen on lisätty VitePressin työ- ja tuloshakemistot. Tämä tiedosto on koodipankin 45. polku. Sen koodisivu ja lataus vastaavat uuden projektin tiedostoa; esimerkkihakemistojen .gitignore-tiedostoja ei ole muutettu."
+    }
+  ],
+  "source_files": [
+    {
+      "path": "docker-postgres/.env.example",
+      "sha256": "caef549c1e83f1cabbffdf53396e94ab110231efd26e324136e953c4968754ac",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/.gitignore",
+      "sha256": "67ccd9a6a0d8f00c3ad0bf09d957b8cf681d3bc616ad9418050f8aee1c0b2cac",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/README.md",
+      "sha256": "988b610529b3ded7ae47a042c2f21c2a1bc8640010f4843899c5e6e0eb5b609c",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/compose.yaml",
+      "sha256": "3657f4f775da24d566dfc4a7b91488cfdcb423ac0057431ccae2164c5074c200",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/sql/01-schema.sql",
+      "sha256": "c515913cbf8799f4aaa0f5ad3c18f5e788dcbb9d1e3baebc89cd6523962ca45c",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/sql/02-write.sql",
+      "sha256": "b9b30473dfe07ec5ab6b2bde7fcb514121c882fa1cdf44a2c07e126e9c207837",
+      "identical_to_original": true
+    },
+    {
+      "path": "docker-postgres/sql/03-read.sql",
+      "sha256": "c3d28981820971da462b2db97d563f9ea00b311296afdf0e6ad2f4ec04869d68",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/00-kieli/hei.ts",
+      "sha256": "6654c4d50ac93c80e385ae751bf3785ecbc116c2b0706c6bf3e3f3eab230d8c4",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/00-kieli/kieli.ts",
+      "sha256": "5015bdd87aa0217bf779675774a8e077c4d48a8c2b6bc9df5b9ca9a34138e570",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/01-palvelin/main.ts",
+      "sha256": "a6819865547dd551dfa4f98167357cec45c149492ec365d856ed0d8f51e6b5c2",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/01-ensimmainen-sivu.html",
+      "sha256": "4e498c54825a48d1210bfd7e8f87720ecbc871ff5e5c42856cf018f8b458be3d",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/02-tyylit/index.html",
+      "sha256": "4f0a9c3e778d52e50839d28285aa70c00592604a5b31c46e2eb096c3240c780f",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/02-tyylit/styles.css",
+      "sha256": "fc8aed2eaef9356a19da4b727b0ce6faa2b937a012452c70b830b15d6f11e7aa",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/03-painike/app.js",
+      "sha256": "6c0aff913d9fe41724fd4a43b2b097afc99a4dc12e614ad49ecfdb5b30ff8b79",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/03-painike/index.html",
+      "sha256": "4ae6314dc95d50136cb1f17f492f7ebeb119a73630726ab44cf686c560f3c4b3",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/04-lomake/app.js",
+      "sha256": "f759b3cf594c11c471f60ca1a6955f72b91cf01baa5436e79d086b310abe91bf",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/04-lomake/index.html",
+      "sha256": "2e30fe3101b9653b0598d4799e73630038141c726ba07a93f506739a1c4eb882",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/05-lista/app.js",
+      "sha256": "0823fcda085d53798859cd5ea32815fafc3a79650e51513aefd68bc63b3d976a",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend-kokeilut/05-lista/index.html",
+      "sha256": "33a60c82c7eae582d373b133b0d34c59b5cc88dd7c3a89f0eaeeb5ee6cd4160e",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend/app.js",
+      "sha256": "9a3429070232463da80ffee34d35cb561a768873009538be06fd765315894aca",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend/index.html",
+      "sha256": "aa40379eea16ba2aadbdeafce654db2b6a6bf268455abb6b802418a36f26e308",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/02-frontend/styles.css",
+      "sha256": "d5fe0af8853b6095ab04993f6d906c43605ea29f9cbd7b2b31bcf7c8c3029c33",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/03-tietokanta/.gitignore",
+      "sha256": "abfc5586f12b8a15992cee06727dc4fb55581b828b5b68ac636b190b3caf4f70",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/03-tietokanta/db_demo.ts",
+      "sha256": "8a87fdf8bb19cf25bf33a4394c15fb346e32689504f457c06bb122dac891a030",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/.dockerignore",
+      "sha256": "a490c99dccc2d18d6bf7163224d8a30607b609f8d80c1722d2e408c41cfb283b",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/.gitignore",
+      "sha256": "7ddc8754a80dcb4a97096b2828a96ee838abc24b6a5aae41bedc121e2a0d9f0a",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/01_create_schema.sql",
+      "sha256": "e573994491e85f3bf9c8482cd4ae5e6798754df7cf8f798a5ad6e6078946f231",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/Dockerfile",
+      "sha256": "6a148bde9364161b25e1cd08096a64e9eac2e6a041a511ce9ec134a2779eb922",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/README.md",
+      "sha256": "f8123284042ea275ee7bc48bb60cd1511fbef8a5c2eb4e8cc5ed22848b580cd1",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/app.ts",
+      "sha256": "075cf2702a158551f88be5471ff30fa27cdd7938b86dda540e2e817c6fab5241",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/auth.ts",
+      "sha256": "1bfe330277391dbf0481ee413d6fe9f66fa802282cc11d5ad34a1c4d65fa83a4",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/compose.sqlite.yaml",
+      "sha256": "d660b4e76a4994b355dad6c336522a8c1ec34397cae48d9990bec192e7cb386a",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/csrfkoe_test.ts",
+      "sha256": "e895cb0aa25f088831805ed9e32f13035ed4b877cd884b1b9067dbd001c60d7d",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/db.ts",
+      "sha256": "52a652d0ec5567a39912f9c47ec22dde4f0de2045071cea244954a1999b5d3c3",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/deno.jsonc",
+      "sha256": "88e78c41b80c66430ebb206101ccdd9512a4144666fc049967f3705e7f8d6ae9",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/http.ts",
+      "sha256": "1c7046ec49532a36f482ce811827decf3a206737bdf119c154295f987538da2e",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/integration_test.ts",
+      "sha256": "67478b7b2824fe95ae7f99798d98e5f8944601958b7bb34ee7488c7d5590c89d",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/main.ts",
+      "sha256": "441c9756b98cecbaf663473297951aaae0ca59cf6f099eddd788c25e1421f7b4",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/oikeuskoe_test.ts",
+      "sha256": "3574e567181d36854fcce499ae165b9ade88257b3c2c58643df0977d53e3f798",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/projects.ts",
+      "sha256": "f1da59aee61237166c2fc220f9a6986ba6fc531e188763a6e1313e3286dc90e4",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/public/app.js",
+      "sha256": "4c79943be251ae448e56e8824f33ae707cac853cc97b7a95030a9c37fb01e646",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/public/index.html",
+      "sha256": "83e647b2ead8137d5140d4b82e6b130fcf1cda28b621b9cfb0d7ec4e1251a523",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/public/styles.css",
+      "sha256": "4af55d5465fa6fc08741798d0a3fa60120a9f8e2ef549b3e25fed1a4038e83d4",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/security.ts",
+      "sha256": "4d70ca11870b5ed6aacf0760879e625dc704f7d0ff8288aae0c8e17c40bb7585",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/security_demo.ts",
+      "sha256": "7794cdd1c05623f79a24da03bc5be1db47718edece3702c8a6e2ff0ae8b72b59",
+      "identical_to_original": true
+    },
+    {
+      "path": "esimerkit/04-valmis/seed/admin.ts",
+      "sha256": "bba75daeec43e1223e7a1c3019427057401b9763152471e2f63ebf5e2a9416d1",
+      "identical_to_original": true
+    }
+  ]
+}

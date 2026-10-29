@@ -1,0 +1,4 @@
+# Tietokanta syntyy db_demo.ts-ohjelman ajossa; harjoitusdataa ei siirretä Gitiin.
+harjoitus.sqlite
+# Mahdolliset SQLite-tietokannan apuosat kuuluvat samaan paikalliseen dataan.
+harjoitus.sqlite-*

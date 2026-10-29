@@ -1,0 +1,166 @@
+<!-- DOCTYPE kertoo selaimelle, että tiedosto käyttää nykyistä HTML-kieltä. -->
+<!doctype html>
+<!-- html ympäröi koko sivun; lang="fi" kertoo tekstin olevan suomea. -->
+<html lang="fi">
+  <!-- head sisältää sivun asetukset, joita ei näytetä varsinaisena sisältönä. -->
+  <head>
+    <!-- charset="utf-8" saa esimerkiksi ä- ja ö-kirjaimet näkymään oikein. -->
+    <meta charset="utf-8">
+    <!-- viewport sovittaa sivun laitteen leveyteen; zoomausta ei estetä. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title näkyy selaimen välilehdessä ja auttaa tunnistamaan sivun. -->
+    <title>Tehtävätaulu – omat projektit</title>
+    <!-- rel kertoo tiedoston olevan tyyliohje; href on CSS-tiedoston osoite. -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- src osoittaa JavaScriptiin; defer odottaa HTML:n jäsentämisen valmistumista. -->
+    <script src="/app.js" defer></script>
+  </head>
+  <!-- body sisältää käyttäjälle näkyvän sivun. -->
+  <body>
+    <!-- a on linkki; href siirtää pääsisältöön; class yhdistää CSS:n ohituslinkkityyliin. -->
+    <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+    <!-- header on sivun aloitusosa; class rajaa sisällön luettavaan leveyteen. -->
+    <header class="page-header">
+      <!-- h1 on sivun ainoa ylimmän tason otsikko. -->
+      <h1>Tehtävätaulu</h1>
+      <!-- p muodostaa tekstikappaleen. -->
+      <p>Pidä omat projektit ja niihin kuuluvat tehtävät järjestyksessä.</p>
+    </header>
+    <!-- main on pääsisältö; id on ohituslinkin kohde; tabindex="-1" sallii kohdistuksen koodista. -->
+    <main id="main-content" tabindex="-1">
+      <!-- noscript näytetään, jos JavaScriptin suoritus on estetty selaimessa. -->
+      <noscript>Tämä harjoitussovellus tarvitsee JavaScriptin. Ota se käyttöön selaimen asetuksissa.</noscript>
+      <!-- id löytää viestikentän koodista; role ja aria-live ilmoittavat muutokset rauhallisesti; aria-atomic lukee koko viestin. -->
+      <p id="status" class="message" role="status" aria-live="polite" aria-atomic="true">Tarkistetaan kirjautumista…</p>
+      <!-- role="alert" ilmoittaa virheestä heti; tyhjä elementti säilyy sivulla viestien vastaanottamista varten. -->
+      <p id="error" class="error-message" role="alert" aria-atomic="true"></p>
+      <!-- section ryhmittelee tunnistautumisen; id auttaa koodia; aria-labelledby nimeää osion otsikon perusteella; hidden piilottaa sen aluksi. -->
+      <section id="auth-section" aria-labelledby="auth-title" hidden>
+        <!-- id sitoo tämän h2-alaotsikon edellisen osion saavutettavaan nimeen. -->
+        <h2 id="auth-title">Kirjaudu tai luo tunnus</h2>
+        <!-- class liittää tähän apukappaleeseen hillityn mutta luettavan tekstityylin. -->
+        <p class="hint">Kaikki alla olevat kentät ovat pakollisia. Harjoittelussa käytä keksittyä sähköpostiosoitetta ja salasanaa, jota et käytä muualla.</p>
+        <!-- div ryhmittelee kaksi lomaketta asettelua varten; class käyttää joustavaa ruudukkoa. -->
+        <div class="two-columns">
+          <!-- form kerää kirjautumiskentät; id yhdistää lomakkeen JavaScriptiin; aria-labelledby antaa sille nimen. -->
+          <form id="login-form" class="card" aria-labelledby="login-title">
+            <!-- h3 on h2-otsikon alainen lomakkeen otsikko; id nimeää lomakkeen. -->
+            <h3 id="login-title">Kirjaudu sisään</h3>
+            <!-- label nimeää kentän; for vastaa täsmälleen inputin id:tä. -->
+            <label for="login-email">Sähköpostiosoite</label>
+            <!-- type tarkistaa sähköpostin muodon; id yhdistää labelin; name nimeää tiedon; autocomplete auttaa täyttämistä; required tekee kentästä pakollisen; maxlength rajaa pituuden. -->
+            <input id="login-email" name="email" type="email" autocomplete="username" required maxlength="254">
+            <!-- for yhdistää salasanan näkyvän nimen oikeaan kenttään. -->
+            <label for="login-password">Salasana</label>
+            <!-- password peittää kirjoituksen; current-password kertoo tallennetusta salasanasta; required tekee kentästä pakollisen; JavaScript ja palvelin tarkistavat pituuden muuttamatta salasanaa. -->
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+            <!-- submit lähettää lomakkeen myös Enter-näppäimellä. -->
+            <button type="submit">Kirjaudu sisään</button>
+          </form>
+          <!-- Toinen form on rekisteröinnille; id löytää sen koodista ja aria-labelledby nimeää sen. -->
+          <form id="register-form" class="card" aria-labelledby="register-title">
+            <!-- h3 kertoo tämän lomakkeen tarkoituksen; id yhdistää sen lomakkeeseen. -->
+            <h3 id="register-title">Luo tunnus</h3>
+            <!-- labelin for yhdistyy rekisteröinnin sähköpostikenttään. -->
+            <label for="register-email">Sähköpostiosoite</label>
+            <!-- email on selaimen sähköpostikenttä; name nimeää arvon; autocomplete auttaa tunnuksen syöttämistä; required ja maxlength rajaavat kenttää. -->
+            <input id="register-email" name="email" type="email" autocomplete="username" required maxlength="254">
+            <!-- labelin for yhdistyy uuden salasanan kenttään. -->
+            <label for="register-password">Uusi salasana</label>
+            <!-- aria-describedby yhdistää kenttään ohjeen; muut attribuutit nimeävät pakollisen uuden salasanan; pituus tarkistetaan JavaScriptissä ja palvelimella samoina Unicode-koodipisteinä. -->
+            <input id="register-password" name="password" type="password" autocomplete="new-password" required aria-describedby="password-hint">
+            <!-- id yhdistää ohjeen kenttään; class antaa yhteisen ohjetyylin. -->
+            <p id="password-hint" class="hint">15–128 merkkiä. Voit käyttää pitkää, helposti muistettavaa lausetta. Erikoismerkki ei ole pakollinen.</p>
+            <!-- submit käynnistää juuri rekisteröintilomakkeen käsittelyn. -->
+            <button type="submit">Luo tunnus ja kirjaudu</button>
+          </form>
+        </div>
+      </section>
+      <!-- section sisältää kirjautuneen näkymän; hidden poistaa sen aluksi myös näppäimistöjärjestyksestä. -->
+      <section id="workspace" aria-labelledby="workspace-title" hidden>
+        <!-- h2 nimeää kirjautuneen työtilan; id on aria-labelledby-viittauksen kohde. -->
+        <h2 id="workspace-title">Oma työtila</h2>
+        <!-- div ryhmittelee käyttäjätiedon ja uloskirjautumisen samalle joustavalle riville. -->
+        <div class="account-row">
+          <!-- JavaScript kirjoittaa kirjautuneen osoitteen tähän p-elementtiin id:n avulla. -->
+          <p id="account-email"></p>
+          <!-- button on toiminto; type="button" estää tahattoman lomakelähetyksen; id yhdistää käsittelijään. -->
+          <button id="logout-button" type="button" class="secondary">Kirjaudu ulos</button>
+        </div>
+        <!-- div muodostaa leveällä näytöllä kaksi saraketta; kapealla sisältö pysyy yhdessä sarakkeessa. -->
+        <div class="two-columns">
+          <!-- section nimeää projektialueen h3-otsikosta; class tekee näkyvän kortin. -->
+          <section class="card" aria-labelledby="projects-title">
+            <!-- h3 kertoo projektialueen tarkoituksen; id nimeää osion. -->
+            <h3 id="projects-title">Omat projektit</h3>
+            <!-- form kerää uuden projektin; id yhdistää luontitoimintoon. -->
+            <form id="project-create-form">
+              <!-- for nimeää uuden projektin kentän; pakollisuus kerrotaan tekstinä. -->
+              <label for="new-project-title">Uuden projektin nimi (pakollinen)</label>
+              <!-- text on tavallinen tekstikenttä; name nimeää arvon; required tekee kentästä pakollisen; Unicode-pituus tarkistetaan JavaScriptissä ja palvelimella. -->
+              <input id="new-project-title" name="title" type="text" required>
+              <!-- submit käynnistää projektin tallentamisen. -->
+              <button type="submit">Luo projekti</button>
+            </form>
+            <!-- id löytää tyhjän listan ohjeen; class antaa ohjetekstin ulkoasun. -->
+            <p id="project-empty" class="hint">Sinulla ei vielä ole projekteja. Luo ensimmäinen projekti yllä.</p>
+            <!-- ul on järjestämätön lista; id löytää sen koodista; class poistaa luettelomerkit; role säilyttää listan tunnistuksen myös ilman merkkejä. -->
+            <ul id="project-list" class="project-list" role="list"></ul>
+          </section>
+          <!-- section sisältää valitun projektin; hidden piilottaa osion ennen valintaa; aria-labelledby käyttää muuntuvaa otsikkoa. -->
+          <section id="project-detail" class="card" aria-labelledby="project-title" hidden>
+            <!-- id löytää muuntuvaotsikon; tabindex="-1" sallii koodin kohdistaa otsikon projektin valinnan jälkeen. -->
+            <h3 id="project-title" tabindex="-1">Valitse projekti</h3>
+            <!-- form muokkaa valitun projektin nimeä; id erottaa sen luontilomakkeesta. -->
+            <form id="project-rename-form">
+              <!-- label kertoo muokattavan arvon ja sen pakollisuuden. -->
+              <label for="project-name">Projektin nimi (pakollinen)</label>
+              <!-- id yhdistää labelin; name nimeää arvon; text on tekstikenttä; required tekee siitä pakollisen; Unicode-pituus tarkistetaan JavaScriptissä ja palvelimella. -->
+              <input id="project-name" name="title" type="text" required>
+              <!-- submit tallentaa nimenmuutoksen. -->
+              <button type="submit" class="secondary">Tallenna projektin nimi</button>
+            </form>
+            <!-- details antaa selaimen oman avattavan lisäosan projektin poistamiselle. -->
+            <details>
+              <!-- summary on näppäimistöllä avattava lisäosan otsikko. -->
+              <summary>Projektin poistaminen</summary>
+              <!-- p kertoo poistamisen seurauksen ennen toimintoa. -->
+              <p>Projektin poistaminen poistaa myös kaikki sen tehtävät. Sovellus pyytää vielä vahvistuksen.</p>
+              <!-- id yhdistää poistokäsittelijään; button ei lähetä lomaketta; danger erottaa ulkoasun tekstin lisäksi. -->
+              <button id="project-delete-button" type="button" class="danger">Poista projekti ja sen tehtävät</button>
+            </details>
+            <!-- h4 on tämän projektin alainen tehtäväotsikko. -->
+            <h4>Tehtävät</h4>
+            <!-- form kerää uuden tehtävän; id yhdistää lomakkeen käsittelijään. -->
+            <form id="task-create-form">
+              <!-- for yhdistyy uuden tehtävän tekstikenttään. -->
+              <label for="new-task-title">Uusi tehtävä (pakollinen)</label>
+              <!-- id yhdistää labelin; name nimeää arvon; text määrittää kenttätyypin; required tekee kentästä pakollisen; Unicode-pituus tarkistetaan JavaScriptissä ja palvelimella. -->
+              <input id="new-task-title" name="title" type="text" required>
+              <!-- submit tallentaa uuden tehtävän valittuun projektiin. -->
+              <button type="submit">Lisää tehtävä</button>
+            </form>
+            <!-- id löytää kappaleen, jossa kerrotaan lukumäärä tai tyhjän/lataavan tilan ohje. -->
+            <p id="task-summary" class="hint">Projektilla ei vielä ole tehtäviä.</p>
+            <!-- ul kertoo tehtävien olevan lista; id löytää sen koodista; class muotoilee listan; role säilyttää listan tunnistuksen myös ilman luettelomerkkejä. -->
+            <ul id="task-list" class="task-list" role="list"></ul>
+          </section>
+        </div>
+        <!-- section näkyy vain ylläpitäjälle; hidden ei ole käyttöoikeussuoja, jonka palvelin tekee erikseen. -->
+        <section id="admin-section" class="card" aria-labelledby="admin-title" hidden>
+          <!-- h3 nimeää ylläpito-osion; id yhdistää siihen aria-labelledby-viittauksen. -->
+          <h3 id="admin-title">Ylläpidon lukumäärät</h3>
+          <!-- id yhdistää tilastohakuun; type="button" tekee erillisen toiminnon. -->
+          <button id="stats-button" type="button" class="secondary">Hae lukumäärät</button>
+          <!-- id on tilastotekstin kohde; p näyttää tiedon tavallisena luettavana tekstinä. -->
+          <p id="stats-output">Lukumääriä ei ole vielä haettu.</p>
+        </section>
+      </section>
+    </main>
+    <!-- footer on sivun loppuosa; class rajaa leveyden samaan tapaan kuin header. -->
+    <footer class="page-footer">
+      <!-- p kertoo sovelluksen tarkoituksen lyhyesti. -->
+      <p>Tehtävätaulu · web-ohjelmoinnin harjoitussovellus</p>
+    </footer>
+  </body>
+</html>

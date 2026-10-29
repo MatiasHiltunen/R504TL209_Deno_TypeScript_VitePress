@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "browser": "Chromium 155.0.8059.84",
+  "passed": 5,
+  "checks": [
+    "1: HTML-otsikko, pääotsikko ja kappaleet näkyvät.",
+    "2: styles.css latautuu, kortin täyte on 1rem ja tausta valkoinen.",
+    "3: ulkoinen JS latautuu deferillä, painike toimii Tab+Enterillä ja päivittää tekstin.",
+    "4: required, pelkät välilyönnit, virheen korjaus, Enter, label ja kirjaimellinen tekstitulostus toimivat.",
+    "5: taulukon kaksi oliota piirretään listaksi ja uudelleenpiirto ei monista rivejä."
+  ],
+  "pageErrors": [],
+  "filesIdenticalToChapter": true
+}

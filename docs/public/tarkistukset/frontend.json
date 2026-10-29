@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-19",
+  "browser": "Chromium 155.0.8059.84",
+  "results": [
+    {
+      "check": "02-demo 320px",
+      "result": "pass",
+      "viewport": 320,
+      "scroll": 320
+    },
+    {
+      "check": "02-demo 200% tekstikoko",
+      "result": "pass",
+      "viewport": 1280,
+      "scroll": 1280
+    },
+    {
+      "check": "02-demo: lisää/lue/muokkaa/valmis/poista/peruuta/näppäimistö/tekstitulostus/muistin tyhjeneminen",
+      "result": "pass"
+    },
+    {
+      "check": "04-valmis 320px",
+      "result": "pass",
+      "viewport": 320,
+      "scroll": 320
+    },
+    {
+      "check": "04-valmis 200% tekstikoko",
+      "result": "pass",
+      "viewport": 1280,
+      "scroll": 1280
+    },
+    {
+      "check": "04-valmis: auth + kaikki projekti/tehtävä-CRUD + pysyvyys + loading + validointivirhe + verkkovirhe + A/B-erottelu + admin + turvallinen tekstitulostus + poiston kohdistus",
+      "result": "pass"
+    },
+    {
+      "check": "Selaimen JavaScript-suoritusvirheet",
+      "count": 0
+    }
+  ],
+  "limitations": [
+    "Ruudunlukijan kuultavia ilmoituksia ei varmennettu automaattisella selaintestillä.",
+    "200 % tarkistus tehtiin tekstin juurikokoa suurentamalla; erillinen 320px reflow tarkistettiin."
+  ]
+}
