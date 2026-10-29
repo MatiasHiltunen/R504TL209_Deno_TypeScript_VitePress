@@ -9,8 +9,8 @@
   },
   "scripts": {
     "content:sync": "node scripts/sync-content.mjs",
-    "docs:dev": "npm run content:sync && vitepress dev docs --host 127.0.0.1 --port 5173",
-    "docs:build": "npm run content:sync && vitepress build docs",
+    "docs:dev": "vitepress dev docs --host 127.0.0.1 --port 5173",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs --host 127.0.0.1 --port 4173"
   },
   "devDependencies": {
