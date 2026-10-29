@@ -117,8 +117,8 @@ export default defineConfig({
         text: 'Sovella ja osoita osaaminen',
         items: [
           { text: '10 Harjoitukset ja arviointi', link: '/luvut/10-harjoitukset' },
-          { text: '11 Opettajalle', link: '/luvut/11-opettajalle' },
-          { text: '12 Koodipankin hakemisto', link: '/koodipankki/' },
+/*           { text: '11 Opettajalle', link: '/luvut/11-opettajalle' }, */
+          { text: '11 Koodipankin hakemisto', link: '/koodipankki/' },
         ],
       },
       {

@@ -38,11 +38,11 @@ Aloita [luvusta 00](./luvut/00-aloita.md) ja etene lukujen järjestyksessä. Opi
 
 Voit valita myös toisen backend-tekniikan, kuten .NETin, Javan, Noden, Rustin tai C++:n. [Vaihtoehtoisen suorituspolun vaatimukset](./luvut/10-harjoitukset.md) ovat samat: tekniikan valinta ei poista pakollisia osaamistavoitteita.
 
-## Opettajalle ja materiaalin muokkaajalle
+<!-- ## Opettajalle ja materiaalin muokkaajalle
 
 [Opettajan luku](./luvut/11-opettajalle.md) sisältää opetuksen rungon ja arvioinnin soveltamisohjeet. [VitePress-käyttöohje](./vitepress-kaytto.md) neuvoo tämän materiaalin paikallisen käynnistyksen, Markdownin muokkaamisen ja staattisen sivuston rakentamisen.
 
-Materiaalisivusto käynnistyy Nodella ja npm:llä. Denoa käytetään kurssin backend-harjoituksiin. Nämä ovat erillisiä ohjelmia, joilla on omat käynnistyskomentonsa ja osoitteensa.
+Materiaalisivusto käynnistyy Nodella ja npm:llä. Denoa käytetään kurssin backend-harjoituksiin. Nämä ovat erillisiä ohjelmia, joilla on omat käynnistyskomentonsa ja osoitteensa. -->
 
 ## Lataukset ja tarkistukset
 
